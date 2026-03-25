@@ -23,8 +23,6 @@
     background: var(--bg); color: var(--text); line-height: 1.7;
   }
   .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
-
-  /* Header */
   .header {
     background: linear-gradient(135deg, var(--primary) 0%, #2a3f6a 100%);
     color: #fff; padding: 40px 0 30px; text-align: center;
@@ -36,8 +34,6 @@
     font-size: 0.85em; text-decoration: none;
   }
   .back-link:hover { color: #fff; }
-
-  /* Steps bar */
   .steps { display: flex; justify-content: center; gap: 0; margin: 32px 0 24px; }
   .step-item {
     display: flex; align-items: center; gap: 8px; padding: 0 16px;
@@ -52,8 +48,6 @@
   }
   .step-item.active .num { background: var(--accent); color: var(--primary); }
   .step-item.done .num { background: var(--success); color: #fff; }
-
-  /* Panel */
   .panel {
     background: var(--card); border: 1px solid var(--border); border-radius: 12px;
     padding: 28px; margin-bottom: 20px;
@@ -62,8 +56,6 @@
     color: var(--primary); font-size: 1.15em; margin-bottom: 16px;
     padding-bottom: 10px; border-bottom: 1px solid var(--border);
   }
-
-  /* Plan summary bar */
   .plan-summary {
     display: flex; justify-content: space-between; align-items: center;
     background: #fdf8ec; border: 1px solid var(--accent-light);
@@ -72,8 +64,6 @@
   .plan-summary .plan-name { font-weight: 700; color: var(--primary); font-size: 1.1em; }
   .plan-summary .plan-price { font-size: 1.4em; font-weight: 700; color: var(--accent); }
   .plan-summary .plan-price small { font-size: 0.55em; color: var(--text-light); }
-
-  /* Period selector */
   .period-options { display: flex; gap: 12px; margin-top: 12px; }
   .period-btn {
     flex: 1; padding: 12px; border: 2px solid var(--border); border-radius: 8px;
@@ -81,8 +71,6 @@
   }
   .period-btn:hover { border-color: var(--accent); }
   .period-btn.selected { border-color: var(--accent); background: #fdf8ec; font-weight: 600; }
-
-  /* Pay button area */
   .pay-area { text-align: center; padding: 20px 0; }
   .pay-btn {
     display: inline-block; padding: 16px 48px; border: none; border-radius: 12px;
@@ -92,14 +80,11 @@
   }
   .pay-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(7,193,96,0.3); }
   .pay-note { font-size: 0.82em; color: var(--text-light); margin-top: 10px; }
-
   .pay-done-area {
     text-align: center; padding: 16px;
     background: #f0faf0; border: 1px solid #c8e6c9; border-radius: 10px; margin-top: 16px;
   }
   .pay-done-area p { font-size: 0.9em; color: var(--text-light); margin-bottom: 10px; }
-
-  /* Form */
   .form-group { margin-bottom: 18px; }
   .form-group label {
     display: block; font-weight: 600; color: var(--primary); margin-bottom: 6px; font-size: 0.95em;
@@ -110,8 +95,6 @@
   }
   .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
   .form-group textarea { resize: vertical; min-height: 60px; }
-
-  /* Token guide */
   .token-guide {
     background: #f5f3ee; border-radius: 10px; padding: 20px; margin-bottom: 20px;
     font-size: 0.9em; line-height: 2;
@@ -123,9 +106,6 @@
     display: inline-block; background: var(--accent-light); color: var(--primary);
     padding: 1px 8px; border-radius: 4px; font-weight: 600;
   }
-  .token-guide img { max-width: 100%; border-radius: 8px; margin-top: 8px; border: 1px solid var(--border); }
-
-  /* Buttons */
   .btn-row { display: flex; gap: 12px; margin-top: 24px; }
   .btn {
     flex: 1; padding: 14px; border: none; border-radius: 10px;
@@ -135,8 +115,6 @@
   .btn-primary:hover { background: #d4b06a; }
   .btn-secondary { background: var(--border); color: var(--text); }
   .btn-secondary:hover { background: #d5d0c5; }
-
-  /* Result */
   .result-box { text-align: center; padding: 32px; }
   .result-box .icon { font-size: 3em; margin-bottom: 12px; }
   .result-box h3 { color: var(--primary); margin-bottom: 8px; }
@@ -145,8 +123,6 @@
     background: #f5f3ee; border-radius: 8px; padding: 16px; margin-top: 16px;
     text-align: left; font-size: 0.88em; line-height: 2;
   }
-
-  /* WeChat QR */
   .wechat-card {
     background: linear-gradient(135deg, #f0faf0, #e8f5e9); border: 2px solid #a5d6a7;
     border-radius: 12px; padding: 24px; margin-top: 20px; text-align: center;
@@ -158,23 +134,38 @@
     display: flex; align-items: center; justify-content: center;
     color: var(--text-light); font-size: 0.85em;
   }
-  .wechat-card .qr-placeholder img {
-    width: 100%; height: 100%; object-fit: contain; border-radius: 10px;
-  }
   .wechat-card .wechat-note {
     font-size: 0.85em; color: var(--text-light); margin-top: 8px; line-height: 1.8;
   }
 
+  /* Channel choice cards */
+  .channel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+  .channel-card {
+    border: 2px solid var(--border); border-radius: 12px; padding: 20px;
+    text-align: center; transition: all 0.2s; cursor: default;
+  }
+  .channel-card.push { border-color: #07c160; background: #f0faf0; }
+  .channel-card.web { border-color: var(--accent); background: #fdf8ec; }
+  .channel-card h4 { font-size: 1em; margin-bottom: 6px; }
+  .channel-card .badge {
+    display: inline-block; padding: 2px 10px; border-radius: 4px;
+    font-size: 0.78em; font-weight: 600; margin-bottom: 8px;
+  }
+  .channel-card.push .badge { background: #07c160; color: #fff; }
+  .channel-card.web .badge { background: var(--accent); color: var(--primary); }
+  .channel-card p { font-size: 0.82em; color: var(--text-light); line-height: 1.6; }
+  .channel-card .pros { color: var(--success); font-weight: 600; font-size: 0.82em; margin-top: 8px; }
+  .channel-card .cons { color: var(--text-light); font-size: 0.78em; }
+
   .hidden { display: none !important; }
-
   .footer { text-align: center; padding: 24px; color: var(--text-light); font-size: 0.8em; }
-
   @media (max-width: 640px) {
     .steps { flex-wrap: wrap; gap: 8px; }
     .step-item { padding: 0 8px; font-size: 0.8em; }
     .step-item:not(:last-child)::after { margin-left: 8px; }
     .plan-summary { flex-direction: column; gap: 8px; text-align: center; }
     .period-options { flex-direction: column; }
+    .channel-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -184,7 +175,7 @@
   <div class="container">
     <h1>陶 鹰 鼎</h1>
     <div class="sub">订阅开通</div>
-    <a href="taoyingding_landing.html" class="back-link">← 返回服务介绍</a>
+    <a href="taoyingding_landing.html" class="back-link">&larr; 返回服务介绍</a>
   </div>
 </div>
 
@@ -193,8 +184,9 @@
   <!-- Steps -->
   <div class="steps">
     <div class="step-item active" id="ind1"><span class="num">1</span> 确认套餐</div>
-    <div class="step-item" id="ind2"><span class="num">2</span> 在线支付</div>
-    <div class="step-item" id="ind3"><span class="num">3</span> 绑定推送</div>
+    <div class="step-item" id="ind2"><span class="num">2</span> 签署协议</div>
+    <div class="step-item" id="ind3"><span class="num">3</span> 在线支付</div>
+    <div class="step-item" id="ind4"><span class="num">4</span> 获取服务</div>
   </div>
 
   <!-- ===== Step 1: 确认套餐 ===== -->
@@ -226,27 +218,70 @@
     <div id="bonusNote" class="hidden" style="margin-top:12px;padding:10px 16px;background:linear-gradient(135deg,#fdf8ec,#f8f0d8);border:1px dashed var(--accent);border-radius:8px;font-size:0.9em;color:var(--primary);text-align:center;">
     </div>
 
-    <div style="margin-top:16px;font-size:0.85em;color:var(--text-light);">
-      <label style="cursor:pointer;display:flex;align-items:flex-start;gap:6px;">
-        <input type="checkbox" id="agreeCheck" style="margin-top:4px;">
-        <span>我已阅读并同意<a href="taoyingding_agreement.html" target="_blank" style="color:var(--accent);font-weight:600;">《量化因子数据订阅服务协议》</a>，理解本服务为量化因子数据订阅服务，不构成投资建议。</span>
-      </label>
-    </div>
-
     <div class="btn-row">
       <a href="taoyingding_landing.html" class="btn btn-secondary" style="text-decoration:none;">返回</a>
-      <button class="btn btn-primary" onclick="goToPay()">下一步：在线支付</button>
+      <button class="btn btn-primary" onclick="goToAgreement()">下一步：签署协议</button>
     </div>
   </div>
 
-  <!-- ===== Step 2: 在线支付 ===== -->
+  <!-- ===== Step 2: 签署协议 ===== -->
   <div id="step2" class="hidden">
+    <div class="panel">
+      <h3>填写基本信息 &amp; 签署协议</h3>
+      <p style="font-size:0.88em;color:var(--text-light);margin-bottom:16px;">
+        请填写以下信息并阅读同意服务协议。此信息将用于创建您的会员账号。
+      </p>
+
+      <div class="form-group">
+        <label>用户名 <span style="color:var(--error);">*</span></label>
+        <input type="text" id="usernameInput" placeholder="设置一个用户名（4-16位字母/数字）" maxlength="16">
+        <p style="font-size:0.78em;color:var(--text-light);margin-top:4px;">用于登录会员系统查看推荐数据</p>
+      </div>
+
+      <div class="form-group">
+        <label>注册邮箱 <span style="color:var(--error);">*</span></label>
+        <input type="email" id="emailInput" placeholder="用于接收账号信息和找回密码">
+      </div>
+
+      <div class="form-group">
+        <label>微信昵称（选填）</label>
+        <input type="text" id="nicknameInput" placeholder="如需开通PushPlus推送，请填写">
+      </div>
+
+      <!-- Agreement section -->
+      <div style="margin-top:20px;padding:16px;background:#f5f3ee;border-radius:10px;">
+        <div style="max-height:200px;overflow-y:auto;font-size:0.82em;color:var(--text-light);line-height:1.9;padding:8px;border:1px solid var(--border);border-radius:8px;background:#fff;margin-bottom:12px;" id="agreementPreview">
+          正在加载协议内容...
+        </div>
+        <a href="taoyingding_agreement.html" target="_blank" style="font-size:0.85em;color:var(--accent);">查看完整协议 &rarr;</a>
+
+        <div style="margin-top:12px;">
+          <label style="cursor:pointer;display:flex;align-items:flex-start;gap:6px;font-size:0.9em;">
+            <input type="checkbox" id="agreeCheck" style="margin-top:4px;">
+            <span>我已仔细阅读并同意<a href="taoyingding_agreement.html" target="_blank" style="color:var(--accent);font-weight:600;">《量化因子数据订阅服务协议》</a>（v1.0），理解本服务为量化因子数据订阅服务，不构成投资建议。我了解协议中关于<strong style="color:var(--error);">知识产权保护和保密义务</strong>的条款，承诺不以任何形式转发、分享推送内容。</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-secondary" onclick="backToStep1()">上一步</button>
+      <button class="btn btn-primary" onclick="signAgreement()">确认签署，下一步</button>
+    </div>
+  </div>
+
+  <!-- ===== Step 3: 在线支付 ===== -->
+  <div id="step3" class="hidden">
     <div class="plan-summary">
       <div>
-        <div class="plan-name" id="planName2">-</div>
-        <div style="font-size:0.85em;color:var(--text-light);" id="planDesc2">-</div>
+        <div class="plan-name" id="planName3">-</div>
+        <div style="font-size:0.85em;color:var(--text-light);" id="planDesc3">-</div>
       </div>
-      <div class="plan-price" id="planPrice2">-</div>
+      <div class="plan-price" id="planPrice3">-</div>
+    </div>
+
+    <div style="background:#e8f5e9;border:1px solid #a5d6a7;border-radius:10px;padding:12px 16px;margin-bottom:16px;font-size:0.88em;color:var(--success);text-align:center;">
+      协议已签署 (v1.0) &middot; <span id="signTime"></span>
     </div>
 
     <div class="panel">
@@ -260,95 +295,87 @@
       </div>
 
       <div class="pay-done-area">
-        <p>支付完成后，请点击下方按钮继续绑定推送通道：</p>
-        <button class="btn btn-primary" onclick="goToToken()" style="max-width:300px;margin:0 auto;">
+        <p>支付完成后，请点击下方按钮继续：</p>
+        <button class="btn btn-primary" onclick="goToResult()" style="max-width:300px;margin:0 auto;">
           已完成支付，下一步
         </button>
       </div>
     </div>
 
     <div class="btn-row">
-      <button class="btn btn-secondary" onclick="backToStep1()">上一步</button>
-    </div>
-  </div>
-
-  <!-- ===== Step 3: 绑定推送 ===== -->
-  <div id="step3" class="hidden">
-
-    <!-- 重要提示 -->
-    <div style="background:#fff3e0;border:2px solid #ff9800;border-radius:10px;padding:16px 20px;margin-bottom:16px;">
-      <div style="font-weight:700;color:#e65100;font-size:1em;margin-bottom:8px;">⚠ 重要：请先完成以下操作，否则将无法接收推送</div>
-      <ol style="padding-left:20px;font-size:0.9em;line-height:2;color:#333;margin:0;">
-        <li>微信搜索并关注公众号 <span style="background:var(--accent-light);color:var(--primary);padding:1px 8px;border-radius:4px;font-weight:600;">pushplus推送加</span></li>
-        <li>关注后，公众号对话框会<b>直接返回您的 Token</b>（32位字母数字组合），请复制保存</li>
-        <li>点击公众号右下角 <b>功能</b> → <b>个人中心</b> → <b>个人资料</b> → <b>实名认证</b></li>
-        <li style="color:#c02020;font-weight:600;">务必完成pushplus个人认证，未认证账户无法接收消息，切记！！</li>
-      </ol>
-    </div>
-
-    <!-- Token guide -->
-    <div class="token-guide">
-      <h4>如何获取 PushPlus Token？</h4>
-      <ol>
-        <li>微信搜索并关注公众号 <span class="highlight">pushplus推送加</span></li>
-        <li>关注成功后，公众号对话框会<b>直接返回您的 Token</b>，长按复制即可</li>
-      </ol>
-      <h4 style="margin-top:16px;">如何完成实名认证？</h4>
-      <ol>
-        <li>在公众号底部点击 <span class="highlight">功能</span> → <span class="highlight">个人中心</span></li>
-        <li>进入 <span class="highlight">个人资料</span> → <span class="highlight">实名认证</span>，按提示完成认证</li>
-        <li>认证完成后即可正常接收推送消息</li>
-      </ol>
-      <p style="margin-top:10px;font-size:0.85em;color:var(--text-light);">
-        Token 是您接收微信推送的唯一凭证，请妥善保管，勿泄露给他人。
-      </p>
-    </div>
-
-    <div class="panel">
-      <h3>填写绑定信息</h3>
-
-      <div class="form-group">
-        <label>PushPlus Token <span style="color:var(--error);">*</span></label>
-        <input type="text" id="tokenInput" placeholder="粘贴您的32位Token，如 a1b2c3d4e5f6..." maxlength="64">
-      </div>
-
-      <div class="form-group">
-        <label>微信昵称 <span style="color:var(--error);">*</span></label>
-        <input type="text" id="nicknameInput" placeholder="用于核对支付与开通身份">
-      </div>
-
-      <div class="form-group">
-        <label>备注（选填）</label>
-        <textarea id="remarkInput" placeholder="如有特殊需求可在此说明"></textarea>
-      </div>
-    </div>
-
-    <div class="btn-row">
       <button class="btn btn-secondary" onclick="backToStep2()">上一步</button>
-      <button class="btn btn-primary" onclick="submitOrder()">提交开通申请</button>
     </div>
   </div>
 
-  <!-- ===== Step 4: 完成 ===== -->
+  <!-- ===== Step 4: 完成 - 双通道展示 ===== -->
   <div id="step4" class="hidden">
     <div class="result-box">
-      <div class="icon">✅</div>
+      <div class="icon">&#10004;</div>
       <h3>订阅申请已提交</h3>
-      <p>运营方确认收款后，将为您开通推送服务并发送测试消息。</p>
+      <p>运营方确认收款后，将为您开通服务。您有两种方式获取推荐数据：</p>
+
+      <!-- 双通道卡片 -->
+      <div class="channel-grid">
+        <div class="channel-card push">
+          <div class="badge">方式一</div>
+          <h4>PushPlus 微信自动推送</h4>
+          <p>
+            每日推荐自动推送到您的微信，<br>无需操作，不会遗漏。
+          </p>
+          <div class="pros">被动接收，省心省力</div>
+          <div class="cons">需完成 PushPlus 实名认证</div>
+        </div>
+        <div class="channel-card web">
+          <div class="badge">方式二</div>
+          <h4>网页登录主动查看</h4>
+          <p>
+            登录会员页面，随时查看当期推荐。<br>手机浏览器即可使用。
+          </p>
+          <div class="pros">无门槛，即开即用</div>
+          <div class="cons">需主动登录，建议设闹钟提醒</div>
+        </div>
+      </div>
+      <p style="font-size:0.82em;color:var(--text-light);margin-top:10px;">两种方式数据完全一致，可同时使用。推荐优先开通方式一。</p>
 
       <div class="order-info" id="orderInfo"></div>
 
-      <!-- 微信客服二维码 -->
+      <!-- PushPlus Token 绑定区域 -->
+      <div class="panel" style="margin-top:20px;text-align:left;">
+        <h3>方式一：开通 PushPlus 推送（可选）</h3>
+        <div style="background:#fff3e0;border:2px solid #ff9800;border-radius:10px;padding:12px 16px;margin-bottom:12px;">
+          <div style="font-weight:700;color:#e65100;font-size:0.9em;margin-bottom:6px;">重要提示</div>
+          <ol style="padding-left:20px;font-size:0.85em;line-height:2;color:#333;margin:0;">
+            <li>微信搜索并关注公众号 <span style="background:var(--accent-light);color:var(--primary);padding:1px 8px;border-radius:4px;font-weight:600;">pushplus推送加</span></li>
+            <li>关注后，公众号对话框会<b>直接返回您的 Token</b></li>
+            <li>点击公众号右下角 <b>功能</b> &rarr; <b>个人中心</b> &rarr; <b>个人资料</b> &rarr; <b>实名认证</b></li>
+            <li style="color:#c02020;font-weight:600;">务必完成实名认证，否则无法接收消息</li>
+          </ol>
+        </div>
+        <div class="form-group">
+          <label>PushPlus Token（选填，可后续通过客服补填）</label>
+          <input type="text" id="tokenInput" placeholder="粘贴您的32位Token" maxlength="64">
+        </div>
+      </div>
+
+      <!-- 方式二提示 -->
+      <div class="panel" style="text-align:left;">
+        <h3>方式二：网页登录查看</h3>
+        <p style="font-size:0.9em;color:var(--text-light);line-height:1.8;">
+          确认收款后，您的会员账号信息将发送至注册邮箱（<span id="emailDisplay" style="font-weight:600;color:var(--primary);"></span>）。<br>
+          收到邮件后，使用用户名和密码登录 <a href="/login" style="color:var(--accent);font-weight:600;">会员页面</a> 即可查看推荐。<br>
+          <span style="font-size:0.85em;color:#999;">建议设置每日闹钟提醒自己登录查看。</span>
+        </p>
+      </div>
+
+      <!-- 客服微信 -->
       <div class="wechat-card">
         <h4>添加专属客服微信</h4>
-        <p style="font-size:0.9em;color:var(--text);margin-bottom:4px;">扫码添加客服微信「量化数据」，协助您完成推送开通</p>
+        <p style="font-size:0.9em;color:var(--text);margin-bottom:4px;">扫码添加客服微信「量化数据」，协助您完成服务开通</p>
         <div class="qr-placeholder">
-          <!-- 替换为实际二维码图片: <img src="wechat_qr.png" alt="客服微信二维码"> -->
           客服微信二维码<br>(即将上线)
         </div>
         <div class="wechat-note">
-          添加时请备注您的<strong>微信昵称</strong>，以便核对订阅信息<br>
-          如在开通PushPlus过程中遇到问题，客服将一对一协助您完成
+          添加时请备注您的<strong>用户名</strong>，以便核对订阅信息
         </div>
       </div>
 
@@ -365,24 +392,24 @@
 </div>
 
 <div class="footer">
-  陶鹰鼎 · 量化因子数据订阅服务<br>
+  陶鹰鼎 &middot; 量化因子数据订阅服务<br>
   <a href="taoyingding_agreement.html" style="color:var(--accent);text-decoration:none;">《量化因子数据订阅服务协议》</a><br>
   本服务为信息技术服务，不构成任何形式的证券投资咨询或投资建议。
 </div>
 
 <script>
-// ================================================================
-//  配置区 —— 只需一个虎皮椒收款链接（开启自定义金额，仅微信支付）
-//  在虎皮椒后台创建后，将链接基础 URL 填入下方
-// ================================================================
 const HUPIJIAO_BASE = 'https://pay.xunhupay.com/payment/wechat.html?id=TODO_FILL_YOUR_ID';
-// ================================================================
 
 const plans = {
   single_month: {
     name: '单期 · 月度', price: 888, unit: '元/月',
     desc: '甲/乙/丙 任选一期，含业绩追踪与跟踪日报', needPeriod: true,
     firstBonus: '首次订阅额外赠送10天'
+  },
+  single_quarter: {
+    name: '单期 · 季度', price: 2388, unit: '元/季',
+    desc: '甲/乙/丙 任选一期，季度优惠约10.4%，含业绩追踪与跟踪日报', needPeriod: true,
+    firstBonus: '首次订阅额外赠送1个月'
   },
   full_month: {
     name: '全期 · 月度', price: 2388, unit: '元/月',
@@ -400,14 +427,13 @@ const periodNames = { a: '甲期', b: '乙期', c: '丙期' };
 let currentPlanKey = 'full_quarter';
 let currentPlan = null;
 let selectedPeriod = null;
+let agreementSigned = false;
 
-// ========== Init ==========
 (function init() {
   const params = new URLSearchParams(window.location.search);
   currentPlanKey = params.get('plan') || 'full_quarter';
   currentPlan = plans[currentPlanKey] || plans.full_quarter;
 
-  // Fill step 1
   document.getElementById('planName').textContent = currentPlan.name;
   document.getElementById('planDesc').textContent = currentPlan.desc;
   document.getElementById('planPrice').innerHTML =
@@ -417,58 +443,109 @@ let selectedPeriod = null;
     document.getElementById('periodPanel').classList.remove('hidden');
   }
 
-  // 首订优惠提示
   if (currentPlan.firstBonus) {
     const bonusEl = document.getElementById('bonusNote');
     bonusEl.innerHTML = '<strong>首次订阅专享：</strong>' + currentPlan.firstBonus;
     bonusEl.classList.remove('hidden');
   }
 
-  // If returning from payment (虎皮椒 return_url with ?paid=1)
-  if (params.get('paid') === '1') {
-    showStep(3);
-  }
+  // Load agreement preview
+  document.getElementById('agreementPreview').innerHTML =
+    '<p><b>第四条 知识产权与保密</b></p>' +
+    '<p>乙方不得以任何形式将甲方推送的数据内容转发、分享、传播、出售或提供给任何第三方。包括但不限于：微信转发、截图分享、复制粘贴、口头传播、公开发布等。</p>' +
+    '<p>每条推送消息包含乙方专属身份标识（包括姓名水印和唯一ID），用于识别信息来源。如甲方发现推送内容被传播至非订阅者，有权追溯信息来源。</p>' +
+    '<p><b style="color:#c02020;">乙方违反上述保密义务的，甲方有权立即终止其服务且不予退款，并保留依法追究其法律责任的权利。如因乙方泄密行为给甲方造成损失的，乙方应予以赔偿。</b></p>' +
+    '<p style="color:#999;margin-top:10px;">以上为协议第四条摘要，请点击下方链接查看完整协议。</p>';
 })();
 
-// ========== Period ==========
 function selectPeriod(el) {
   document.querySelectorAll('.period-btn').forEach(b => b.classList.remove('selected'));
   el.classList.add('selected');
   selectedPeriod = el.dataset.period;
 }
 
-// ========== Step Navigation ==========
 function showStep(n) {
   ['step1','step2','step3','step4'].forEach(id => document.getElementById(id).classList.add('hidden'));
   document.getElementById('step' + n).classList.remove('hidden');
 
-  ['ind1','ind2','ind3'].forEach((id, i) => {
+  ['ind1','ind2','ind3','ind4'].forEach((id, i) => {
     const el = document.getElementById(id);
     el.classList.remove('active', 'done');
     if (i + 1 < n) el.classList.add('done');
     else if (i + 1 === n) el.classList.add('active');
   });
-
-  // Fill plan info on step 2
-  if (n === 2) {
-    const periodText = selectedPeriod ? '（' + periodNames[selectedPeriod] + '）' : '';
-    document.getElementById('planName2').textContent = currentPlan.name + periodText;
-    document.getElementById('planDesc2').textContent = currentPlan.desc;
-    document.getElementById('planPrice2').innerHTML =
-      currentPlan.price.toLocaleString() + '<small>' + currentPlan.unit + '</small>';
-  }
 }
 
-function goToPay() {
+function goToAgreement() {
   if (currentPlan.needPeriod && !selectedPeriod) {
     alert('请先选择期别（甲/乙/丙）');
     return;
   }
-  if (!document.getElementById('agreeCheck').checked) {
-    alert('请先阅读并同意《量化因子数据订阅服务协议》');
+  showStep(2);
+}
+
+function signAgreement() {
+  var username = document.getElementById('usernameInput').value.trim();
+  var email = document.getElementById('emailInput').value.trim();
+
+  if (!username || username.length < 4) {
+    alert('请输入用户名（至少4个字符）');
     return;
   }
-  showStep(2);
+  if (!/^[a-zA-Z0-9_]+$/.test(username)) {
+    alert('用户名只能包含字母、数字和下划线');
+    return;
+  }
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    alert('请输入有效的邮箱地址');
+    return;
+  }
+  if (!document.getElementById('agreeCheck').checked) {
+    alert('请先阅读并勾选同意服务协议');
+    return;
+  }
+
+  // Call agreement signing API
+  var periodText = selectedPeriod ? ' (' + periodNames[selectedPeriod] + ')' : '';
+  fetch('/api/agreement/sign', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      username: username,
+      email: email,
+      plan: currentPlan.name + periodText,
+    })
+  })
+  .then(function(res) { return res.json(); })
+  .then(function(data) {
+    if (data.error) {
+      alert('协议签署失败: ' + data.error);
+      return;
+    }
+    agreementSigned = true;
+    document.getElementById('signTime').textContent =
+      new Date(data.confirmedAt).toLocaleString('zh-CN');
+
+    // Fill step 3 info
+    var pText = selectedPeriod ? '（' + periodNames[selectedPeriod] + '）' : '';
+    document.getElementById('planName3').textContent = currentPlan.name + pText;
+    document.getElementById('planDesc3').textContent = currentPlan.desc;
+    document.getElementById('planPrice3').innerHTML =
+      currentPlan.price.toLocaleString() + '<small>' + currentPlan.unit + '</small>';
+
+    showStep(3);
+  })
+  .catch(function() {
+    // In case API is not available (static hosting), still allow proceeding
+    agreementSigned = true;
+    document.getElementById('signTime').textContent = new Date().toLocaleString('zh-CN');
+    var pText = selectedPeriod ? '（' + periodNames[selectedPeriod] + '）' : '';
+    document.getElementById('planName3').textContent = currentPlan.name + pText;
+    document.getElementById('planDesc3').textContent = currentPlan.desc;
+    document.getElementById('planPrice3').innerHTML =
+      currentPlan.price.toLocaleString() + '<small>' + currentPlan.unit + '</small>';
+    showStep(3);
+  });
 }
 
 function openPay() {
@@ -476,47 +553,46 @@ function openPay() {
     alert('支付通道配置中，请联系运营方（tyd_666@163.com）获取支付方式。');
     return;
   }
-  const periodText = selectedPeriod ? '（' + periodNames[selectedPeriod] + '）' : '';
-  const title = '陶鹰鼎·' + currentPlan.name + periodText;
-  const payUrl = HUPIJIAO_BASE
+  var periodText = selectedPeriod ? '（' + periodNames[selectedPeriod] + '）' : '';
+  var title = '陶鹰鼎·' + currentPlan.name + periodText;
+  var email = document.getElementById('emailInput').value.trim();
+  var payUrl = HUPIJIAO_BASE
     + '&price=' + currentPlan.price
-    + '&title=' + encodeURIComponent(title);
+    + '&title=' + encodeURIComponent(title)
+    + '&plugins=' + encodeURIComponent(email);
   window.open(payUrl, '_blank');
 }
 
-function goToToken() { showStep(3); }
-function backToStep1() { showStep(1); }
-function backToStep2() { showStep(2); }
+function goToResult() {
+  var username = document.getElementById('usernameInput').value.trim();
+  var email = document.getElementById('emailInput').value.trim();
+  var nickname = document.getElementById('nicknameInput').value.trim();
+  var token = document.getElementById('tokenInput').value.trim();
 
-// ========== Submit ==========
-function submitOrder() {
-  const token = document.getElementById('tokenInput').value.trim();
-  const nickname = document.getElementById('nicknameInput').value.trim();
-  const remark = document.getElementById('remarkInput').value.trim();
-
-  if (!token) { alert('请输入 PushPlus Token'); return; }
-  if (token.length < 10) { alert('Token 格式不正确，请检查（应为32位字母数字组合）'); return; }
-  if (!nickname) { alert('请输入微信昵称'); return; }
-
-  const periodText = selectedPeriod ? '（' + periodNames[selectedPeriod] + '）' : '';
-  const orderTime = new Date().toLocaleString('zh-CN');
-  const orderLines = [
+  var periodText = selectedPeriod ? '（' + periodNames[selectedPeriod] + '）' : '';
+  var orderTime = new Date().toLocaleString('zh-CN');
+  var lines = [
     '【陶鹰鼎 · 订阅开通申请】',
     '',
     '套餐：' + currentPlan.name + periodText,
-    '金额：¥' + currentPlan.price.toLocaleString(),
-    '微信昵称：' + nickname,
-    'PushPlus Token：' + token,
-    remark ? '备注：' + remark : '',
+    '金额：\u00a5' + currentPlan.price.toLocaleString(),
+    '用户名：' + username,
+    '邮箱：' + email,
+    nickname ? '微信昵称：' + nickname : '',
+    token ? 'PushPlus Token：' + token : '',
     '',
     '提交时间：' + orderTime,
     '',
-    '（请确认已完成微信支付）'
-  ].filter(l => l !== '').join('\n');
+    '（请确认已完成支付）'
+  ].filter(function(l) { return l !== ''; }).join('\n');
 
-  document.getElementById('orderInfo').innerText = orderLines;
+  document.getElementById('orderInfo').innerText = lines;
+  document.getElementById('emailDisplay').textContent = email;
   showStep(4);
 }
+
+function backToStep1() { showStep(1); }
+function backToStep2() { showStep(2); }
 </script>
 
 </body>
